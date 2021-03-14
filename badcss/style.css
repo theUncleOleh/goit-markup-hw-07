@@ -89,12 +89,15 @@ img {
 .page-header__nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
 }
 
 /*  Логотип */
 
 .logo {
+  display: flex;
+
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -102,11 +105,11 @@ img {
   line-height: 1.19;
 }
 
-.logo--blue {
+.logo__text--blue {
   color: var(--link-collor);
 }
 
-.logo--black {
+.logo__text--black {
   color: black;
 }
 
@@ -115,7 +118,7 @@ img {
 .site-nav {
   display: flex;
   align-items: center;
-  margin-left: 93px;
+  /* margin-left: 93px; */
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -193,8 +196,16 @@ img {
 
 /* навигация мейл и телефон */
 
-.nav-link,
-.nav-link {
+.nav-field {
+  display: flex;
+  margin-left: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  transition: var(--transition-color);
+}
+
+.nav-field__link{
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -215,16 +226,10 @@ img {
   color: var(--link-collor);
 }
 
-.nav-field {
-  display: flex;
-  margin-left: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  transition: var(--transition-color);
-}
+
 
 .nav-link__icon {
-  display: block;
+  /* display: block; */
   width: 16px;
   height: 12px;
   margin-right: 10px;
@@ -232,15 +237,15 @@ img {
   /* fill: carrentColor; */
 }
 
-.nav-link {
+/* .nav-link {
   display: flex;
   align-content: center;
-}
+} */
 
-.nav-field__item:hover
+/* .nav-field__item:hover
 .nav-field__item:focus {
   color: var(--link-collor);
-}
+} */
 
 .nav-link__icon {
   fill: currentColor;
@@ -254,7 +259,7 @@ img {
   outline: 1px solid green;
 } */
 
-.nav-field__item{
+.nav-field__item:not(:first-child) {
   margin-left: 50px;
 }
 
@@ -654,46 +659,56 @@ img {
 /* Подвал сайта  */
 /* общее правило для всего футера */
 
-.footer-all {
+.footer-wrap{
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
  
 
 }
 
-.footer-back {
+
+
+.footer {
   padding-top: 6px;
-  background-color: var(--footer-back); 
+  background-color: var(--footer-back);
+  
+
  
 }
-/* футер лого и адрес */
-.footer-logo {
-  display: block;
-}
 
-.footer-logo {
+.logo--padding {
   padding-top: 60px;
-  /* outline: 1px solid#008000; */
+
 }
 
-.footer-logo-blue {
+
+.logo__text--blue {
   color: var(--link-collor);
 }
 
-.adress-link {
-  display: block;
+.logo__text--white {
+  color: var(--white-text-collor);
 }
+  
 
-.adress-link {
+/* физический адресс */
+
+.adress-field__link {
+  display: inline-block;
   margin-top: 20px;
-  padding-bottom: 60px;
 }
 
-.adress {
-  display: block;
-}
 
-.map-address {
+.adress-field__link {
+  /* display: block; */
+  
+
   color: var(--white-text-collor);
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -704,32 +719,30 @@ img {
   /* outline: 1px solid #008000; */
 }
 
-.map-item {
+.adress-field__map{
+  
   margin-top: 20px;
   margin-bottom: 0px;
 }
 
-.footer-logo-white {
-  color: var(--white-text-collor);
-}
-
-.footer-nav {
-  display: block;
+.address-field__nav-field--flex{
+  display: flex;
+  flex-direction: column;
   padding-left: 0px;
   margin-bottom: 0px;
   margin-top: 9px;
 }
 
-.footer-nav-link:hover,
-.footer-nav-link:focus {
+.nav-field__link:hover,
+.nav-field__link:focus {
   color: var(--link-collor);
 }
 
-.footer-nav-link {
-  display: block;
+.nav-field__link--littlepadding {
+  /* display: block; */
 
-  margin-top: 9px;
-  margin-bottom: 9px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   transition: var(--transition-color);
 
   font-family: Roboto, sans-serif;
@@ -737,25 +750,31 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.02em;
+  
   color: var(--primary-text-color);
 }
+
 /* футер бокс:присоединяйся и соц сети */
 
-.footer-box {
+.sociall{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+ 
+}
+
+.sociall__group {
+  display: flex;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-left: 0px;
 }
 
-.footer-sociall {
+/* .footer-sociall {
   margin-left: 70px;
-}
+} */
 
-.footer-title {
+.sociall__title {
+  display: block;
   margin-top: 0px;
   margin-bottom: 20px;
   font-family: Roboto, sans-serif;
@@ -768,16 +787,16 @@ img {
   color: var(--white-text-collor);
 }
 
-.footer-mark {
+.sociall__item {
   width: 44px;
   height: 44px;
 }
 
-.footer-mark:not(:first-child) {
+.sociall__item:not(:first-child) {
   margin-left: 10px;
 }
 
-.footer-link {
+.sociall__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -790,33 +809,41 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-link:hover,
-.footer-link:focus {
+.sociall__link:hover,
+.sociall__link:focus {
   background-color: var(--link-collor);
 }
 
-.footer-icon {
+.sociall__icon {
   fill: var(--white-text-collor);
 }
 
-.sociall-sign{
+.sign-group{
   display: flex;
+  flex-direction: column;
+  /* margin-left: auto ;
+  margin-right: 0; */
 }
 
-.sign-wrap{
-  margin-left: auto ;
-  margin-right: 0;
+.sign-group__title{
+  /* display: flex; */
+    /* position: absolute;
+    top: 0px;
+    right: 0; */
+  margin-top: 72px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-text-collor);
+  margin-bottom: 20px;
   
-   
-
- 
 }
 
-.sign-title{
-  display: block;
-}
-
-.sign-field{
+.sign-group__field{
   display: block;
   
   width: 358px;
@@ -836,32 +863,15 @@ img {
   border-radius: 4px;
 }
 
-.sign-title{
-  /* position: absolute;
-  top: 0px;
-  right: 0; */
-  margin-top: 72px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--white-text-collor);
-  margin-bottom: 20px;
-}
-
-.sign{
+.sign-group__item{
   display: flex;
- 
 }
 
-.sign-btn-icon{
+.sign-group__button{
   position: relative;
 }
 
-.sign-btn{ 
+.sign-group__btn{ 
  
   width: 200px;
   height: 50px;
@@ -872,7 +882,7 @@ img {
   border-radius: 4px;
 }
 
-.sign-item { 
+.sign-group__text { 
   padding-left: 29px ;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -890,7 +900,7 @@ img {
   color: var(--white-text-collor);
 }
 
-.sign-icon{
+.sign-group__icon{
   position: absolute;
   top: 13px;
   right: 28px;

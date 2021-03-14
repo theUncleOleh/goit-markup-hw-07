@@ -17,7 +17,7 @@
         <div class="container">
     <nav>
         <div class="page-header__nav">
-            <a class="logo" href="WebStudio"> <span class="logo--blue">Web</span><span class="logo--black" >Studio</span> </a>
+            <a class="logo" href="WebStudio"> <span class="logo__text logo__text--blue">Web</span><span class="logo__text logo__text--black" >Studio</span> </a>
         
 
        <ul class="site-nav" > 
@@ -39,13 +39,13 @@
              
 
                 <a  
-                  class="nav-link"  href="mailto:info@devstudio.com" > <svg  class="nav-link__icon" width="16" height="12"  >
+                  class="nav-field__link"  href="mailto:info@devstudio.com" > <svg  class="nav-link__icon" width="16" height="12"  >
                   <use href="./images/symbol-defs.svg#icon-envelope-white" ></use>
                   </svg>
                   info@devstudio.com</a>
             </li>
             <li class="nav-field__item" >
-                <a class="nav-link" href="tel:+380961111111"> <svg  class="nav-link__icon" width="10px" height="16px" >
+                <a class="nav-field__link" href="tel:+380961111111"> <svg  class="nav-link__icon" width="10px" height="16px" >
                     <use href="./images/symbol-defs.svg#icon-smartphone"  ></use>
                 </svg>
                 +38 096 111 11 11</a>
@@ -383,74 +383,73 @@
     
     </main> 
    
-<footer class="footer-back" > 
+<footer class="footer" > 
      <div  class="container" >
-    <div class="footer-all"> 
-       <div>
-        <div class="footer-logo" >
-    <a class="linc-logo" href="WebStudio"> <span class="footer-logo-blue" >Web</span><span class="footer-logo-white" >Studio</span> </a>
-</div> 
-<div class="adress-link" >  
-    <address class="address" >
-     
-        
-           <p class="map-item" > <span class="map-address" >г. Киев, пр-т Леси Украинки, 26</span> </p>
-      <ul class="footer-nav" >
+     <div class="footer-wrap" >
+    <div class="footer__nav"> 
+    <a class="logo logo--padding" href="WebStudio"> <span class="logo__text logo__text--blue" >Web</span><span class="logo__text logo__text--white" >Studio</span> </a> 
+  
+    <address class="address-field" >
+     <p class="adress-field__link" > <span class="adress-field__map" >г. Киев, пр-т Леси Украинки, 26</span> </p>
+      <ul class="nav-field address-field__nav-field address-field__nav-field--flex" >
          <li >
-           <a class="footer-nav-link" href="mailto:info@example.com">info@example.com</a>
+           <a class="nav-field__link nav-field__link--littlepadding" href="mailto:info@example.com">info@example.com</a>
          </li> 
          <li>
-            <a class="footer-nav-link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            <a class="nav-field__link nav-field__link--littlepadding" href="tel:+380961111111">+38 096 111 11 11</a></li>
        </ul> 
        
     </address>
-</div> 
-</div> <div  class="sociall-sign">
-<div class="footer-sociall" >
-   <h3 class="footer-title" > ПРИСОЕДИНЯЙТЕСЬ</h3> 
-        <ul class="footer-box" >
-            <li class="footer-mark" >
-                <a class="footer-link"  href=""><svg class="footer-icon" width="20px" height="20px" >
+</div>
+
+ <div  class="sociall">
+
+   <h3 class="sociall__title" > ПРИСОЕДИНЯЙТЕСЬ</h3> 
+        <ul class="sociall__group" >
+            <li class="sociall__item" >
+                <a class="sociall__link"  href=""><svg class="sociall__icon" width="20px" height="20px" >
                    <use href="./images/symbol-defs.svg#icon-instagram" ></use>
 
                 </svg></a>
             
             </li> 
-            <li class="footer-mark" >
-                <a class="footer-link"  href=""><svg class="footer-icon" width="20px" height="20px" >
+            <li class="sociall__item" >
+                <a class="sociall__link"  href=""><svg class="sociall__icon" width="20px" height="20px" >
                    <use href="./images/symbol-defs.svg#icon-twitter" ></use>
 
                 </svg></a>
             
             </li>
-             <li class="footer-mark" >
-                <a class="footer-link"  href=""><svg class="footer-icon" width="20px" height="20px" >
+             <li class="sociall__item" >
+                <a class="sociall__link"  href=""><svg class="sociall__icon" width="20px" height="20px" >
                    <use href="./images/symbol-defs.svg#icon-facebook" ></use>
 
                 </svg></a>
             
             </li> 
-            <li class="footer-mark" >
-                <a class="footer-link"  href=""><svg class="footer-icon" width="20px" height="20px" >
+            <li class="sociall__item" >
+                <a class="sociall__link"  href=""><svg class="sociall__icon" width="20px" height="20px" >
                    <use href="./images/symbol-defs.svg#icon-linkedin" ></use>
 
                 </svg></a>
             
             </li>
         </ul>
-</div>
+
 </div>
  
-<div class="sign-wrap" >
-<label for="sign"class="sign-title"> Подпишитесь на рассылку</label> 
-<div class="sign" >
-<input class="sign-field" type="email" name="mail" id="sign" placeholder="E-mail">
-<div class="sign-btn-icon">
-<button class="sign-btn" type="submit" > <span class="sign-item">Подписаться</span> </button>
+<div class="sign-group" >
+<label for="sign"class="sign-group__title"> Подпишитесь на рассылку</label> 
+<div class="sign-group__item" >
+<input class="sign-group__field" type="email" name="mail" id="sign" placeholder="E-mail">
+<div class="sign-group__button">
+<button class="sign-group__btn" type="submit" > <span class="sign-group__text">Подписаться</span> </button>
 
-<svg class="sign-icon" width="24" height="24">
+<svg class="sign-group__icon" width="24" height="24">
     <use  href="./images/symbol-defs.svg#icon-icon-send"></use>
-</svg></div></div>
+</svg>
+</div>
+</div>
 </div>
 </div>
 </div>
