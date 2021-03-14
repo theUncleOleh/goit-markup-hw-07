@@ -1181,9 +1181,9 @@ img {
 
 /* Портфлио */
 /* /
-* линия хедера в Портфолио */ */
+* линия хедера в Портфолио */ 
 
-.header-line-bottom {
+.page-header--line {
   border-bottom: 1px solid #ececec;
 
 }
@@ -1198,11 +1198,11 @@ img {
   margin-bottom: 50px;
 }
 
-.main-button-mark:not(:first-child) {
+.main-button__item:not(:first-child) {
   margin-left: 8px;
 }
 
-.main-button-mark {
+.main-button__item{
   display: flex;
   height: 38px;
   background-color: var(--team-back);
@@ -1210,7 +1210,7 @@ img {
   color: var(--h-collor);
 }
 
-.main-button-item {
+.main-button__link{
   display: flex;
   border-radius: 4px;
   padding-left: 22px;
@@ -1230,8 +1230,8 @@ img {
   color: var(--h-collor);
 }
 
-.main-button-item:hover,
-.main-button-item:focus {
+.main-button__link:hover,
+.main-button__link:focus {
   background-color: var(--link-collor);
   color: var(--white-text-collor);
   border-color: var(--link-collor);
@@ -1250,15 +1250,6 @@ img {
   padding-top: 94px;
 }
 
-.product-name {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 36px;
-  color: var(--h-collor);
-}
-
 .progects {
   display: flex;
   flex-wrap: wrap;
@@ -1267,7 +1258,7 @@ img {
   margin-bottom: 0px;
 }
 
-.progects-name {
+.progects__item {
   display: flex;
   width: 370px;
   /* outline: 1px solid #008000; */
@@ -1286,50 +1277,15 @@ img {
   outline: 1px solid #008000;
 } */
 
-.progects-name:nth-child(3n) {
+.progects__item:nth-child(3n) {
   margin-right: 0;
 }
 
-.progects-name:nth-last-child(-n + 3) {
+.progects__item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
-.product {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 30px;
-  color: var(--primary-text-color);
-}
-
-.product-title {
-  /* display: flex; */
-  width: 100%;
-  height: 100%;
-  transition: var(--transition-shadow);
-}
-
-.product-title:hover,
-.product-title:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.card-image {
-  position: relative;
-  overflow: hidden;
-  border-style: none;
-  width: 368px;
-  height: 294px;
-}
-
-.product-image {
-  display: block;
-  width: 100%;
-}
-
-.progect-overlay {
+.progects__overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1342,32 +1298,7 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.product-title:hover .progect-overlay {
-  transform: translateY(0);
-}
-
-/* .card-image:hover .progect-overlay{
-  transform: translateY(0);
-} */
-
-.our-product {
-  padding-top: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-}
-
-.product-name {
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
-
-.product {
-  margin-top: 4px;
-  margin-bottom: 0px;
-}
-
-.overlay-text {
+.progects__text {
   margin-left: 24px;
   margin-right: 24px;
   margin-top: 63px;
@@ -1380,6 +1311,76 @@ img {
   letter-spacing: 0.03em;
   color: var(--white-text-collor);
 }
+
+.product__title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  color: var(--h-collor);
+}
+
+.product__text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--primary-text-color);
+}
+
+.progects__field {
+  /* display: flex; */
+  width: 100%;
+  height: 100%;
+  transition: var(--transition-shadow);
+}
+
+.progects__field:hover,
+.progects__field:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.progects__card {
+  position: relative;
+  overflow: hidden;
+  border-style: none;
+  width: 368px;
+  height: 294px;
+}
+
+.progects__image {
+  display: block;
+  width: 100%;
+}
+
+.progects__field:hover .progects__overlay {
+  transform: translateY(0);
+}
+
+/* .card-image:hover .progect-overlay{
+  transform: translateY(0);
+} */
+
+.product {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+}
+
+.product__title {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.product__text {
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+
 
 /* .frame {
   outline: 2px solid green;
