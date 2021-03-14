@@ -228,7 +228,7 @@ img {
 
 
 
-.nav-link__icon {
+.nav-field__icon {
   /* display: block; */
   width: 16px;
   height: 12px;
@@ -247,7 +247,7 @@ img {
   color: var(--link-collor);
 } */
 
-.nav-link__icon {
+.nav-field__icon {
   fill: currentColor;
 }
 
