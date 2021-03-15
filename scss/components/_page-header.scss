@@ -64,14 +64,15 @@
     position: relative;
   } */
   
-  &__link:hover,
-  &__link:focus {
-    color: $link-collor ;
-  }
-  
-  &__link {
-    @include transition(color);
-  }
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus {
+  color: $link-collor ;
+}
+
+.site-nav__link {
+  @include transition(color);
 }
 
 .site-nav__link--current {
@@ -127,7 +128,7 @@
   @include  transition(color)
 }
   
-.nav-field__item{
+.nav-field__link{
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -140,14 +141,13 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: $primary-text-color;
-
-  
-  &__item :hover,
-  &__item:focus {
-    color: $link-collor;
-  }
+  color: $primary-text-color ;
 } 
+
+.nav-field__item :hover,
+.nav-field__item:focus {
+  color: $link-collor;
+}
 
 .nav-field__icon {
   
