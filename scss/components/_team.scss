@@ -1,6 +1,7 @@
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
+  
   background-color: $team-back;
 }
   
@@ -8,12 +9,14 @@
   text-align: center;
   margin-bottom: 50px;
   margin-top: 0px;
+  
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+  
   color: $h-collor;
 }
   
@@ -32,14 +35,17 @@
   
 .team-card__item {
   margin-right: 30px;
+  
   background-color: $white-text-collor ;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 }
   
-.team-card__item:last-child {
-  margin-right: 0px;
-}
+
   
 .team-card__name {
   text-align: center;
@@ -50,7 +56,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.1875;
 }
   
 .team-card__profession {
@@ -62,7 +68,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.1875;
 }
   
 .sociall-box{
@@ -73,6 +79,11 @@
   margin-top: 16px;
   margin-bottom: 30px;
 }
+
+.sociall-box__item:not(:first-child) {
+  margin-left: 10px;
+}
+  
   
 /*  сначала дать цвет иконки на ссылку, а потом изменить ее при ховере */
   
@@ -90,16 +101,16 @@
   color: $social-icon;
     
   /* background-color: blue; */
+
+  &:hover,
+  &:focus {
+    background-color: $link-collor;
+    color: $white-text-collor;
+  }
 }
-  
-.sociall-box__item:not(:first-child) {
-  margin-left: 10px;
-}
-  
-.sociall-box__link:hover,
-.sociall-box__link:focus {
-  background-color: $link-collor;
-  color: $white-text-collor;
+
+.sociall-box__icon {
+  fill: currentColor;
 }
   
 /* .icon{
@@ -107,6 +118,3 @@
   
   } */
   
-.sociall-box__icon {
-  fill: currentColor;
-}

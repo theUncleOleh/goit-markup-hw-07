@@ -6,10 +6,7 @@
   margin-bottom: 50px;
 }
   
-.main-button__item:not(:first-child) {
-  margin-left: 8px;
-}
-  
+
 .main-button__item{
   display: flex;
   height: 38px;
@@ -17,8 +14,12 @@
     
   /* border-radius: 4px; */
   color: $h-collor;
-}
   
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+}  
+
 .main-button__link{
   display: flex;
   border-radius: 4px;
@@ -26,6 +27,7 @@
   padding-right: 22px;
   padding-top: 6px;
   padding-bottom: 6px;
+  border: none;
   
   @include transition(background-color);
   @include transition(color);
@@ -38,13 +40,14 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $h-collor;
-}
+
   
-.main-button__link:hover,
-.main-button__link:focus {
-  background-color: $link-collor;
-  color: $white-text-collor;
-  border-color: $link-collor;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  &:hover,
+  &:focus {
+    background-color: $link-collor;
+    color: $white-text-collor;
+    border-color: $link-collor;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }

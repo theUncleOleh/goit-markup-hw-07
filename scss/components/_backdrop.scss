@@ -44,6 +44,7 @@
   transform: translate(-50%, -50%); 
  
   @include  transition(transform);
+  
   min-height: 581px;
   max-width: 528px;
   width: 100%;
@@ -68,16 +69,29 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
+  cursor: pointer;
   
-  &__btn:hover,
-  &__btn:focus {
+  &:hover,
+  &:focus {
     border: 1px solid $link-collor;
     color: $link-collor;
+    
+  } 
+  
+  &:hover .modal__icon,
+  &:focus .modal__icon{
+    transform: rotate(45deg);
   }
+
 } 
+
+.modal__icon{
+  transform: rotate(0deg);
+}
 
 .modal__icon {
   fill: currentColor;
+  
 }
   
 .modal__title {

@@ -5,16 +5,19 @@
 }
   
 .clients__title {
+  margin-bottom: 50px;
+  margin-top: 0px;
+  
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  
   color: $h-collor;
-  margin-bottom: 50px;
-  margin-top: 0px;
+  
 }
   
 .clients__box {
@@ -24,9 +27,7 @@
   padding-left: 0px;
 }
   
-.clients__item:not(:first-child) {
-  margin-left: 30px;
-}
+
   
 .clients__item {
   display: flex;
@@ -35,6 +36,10 @@
     
   width: 170px;
   height: 90px;
+  
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
 }
   
 .clients__link {
@@ -49,12 +54,12 @@
   @include transition(border);
   color: $social-icon;
   border: 1px solid $social-icon;
-}
   
-.clients__link:hover,
-.clients__link:focus {
-  color: $link-collor;
-  border: 1px solid $link-collor;
+  &:hover,
+  &:focus {
+    color: $link-collor;
+    border: 1px solid $link-collor;
+  }
 }
   
 .clients__logo {

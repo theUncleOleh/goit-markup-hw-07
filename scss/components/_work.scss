@@ -14,6 +14,7 @@
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16; 
+ 
   color: $h-collor;
 }
    
@@ -23,26 +24,25 @@
   
   display: flex;
   
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  
   /* outline: 1px solid green; */
-}
-  
-.work-thumb__item:not(:last-child) {
-  margin-right: 30px;
-}
-  
-.work-thumb__item {
-  display: flex;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
   
 .work-thumb {
   display: flex;
+  
+  padding-left: 0px;
+  margin: 0px;
 }
   
-.work-thumb__item {
-  padding-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+
   
 /* 
   .work-imagine{
